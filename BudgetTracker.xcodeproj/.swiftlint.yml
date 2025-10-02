@@ -1,0 +1,48 @@
+# SwiftLint Configuration
+# This file configures SwiftLint rules for the project.
+# Docs: https://realm.github.io/SwiftLint/
+
+# Swift version (optional, helps rule behavior for newer syntax)
+swift_version: 6.0
+
+# Directories to lint (adjust if your project structure changes)
+included:
+  - BudgetTracker
+  - BudgetTrackerTests
+  - BudgetTrackerUITests
+
+# Rules you want to disable globally (start light; tighten over time)
+disabled_rules:
+  - line_length
+  - trailing_whitespace
+  - todo
+  - identifier_name
+  - type_name
+  - function_body_length
+  - cyclomatic_complexity
+
+# Opt-in rules that are generally safe and helpful
+opt_in_rules:
+  - empty_count
+  - explicit_init
+  - fatal_error_message
+  - first_where
+  - implicit_return
+  - sorted_first_last
+  - weak_delegate
+  - unowned_variable_capture
+
+# Customize some common rules (tweak as your team prefers)
+identifier_name:
+  min_length: 2
+  excluded:
+    - id
+    - x
+    - y
+
+line_length:
+  ignores_comments: true
+  ignores_interpolated_strings: true
+
+# Reporter format for Xcode
+reporter: xcode

@@ -115,6 +115,7 @@
 				8FD1414E2E7E892900CCC911 /* Sources */,
 				8FD1414F2E7E892900CCC911 /* Frameworks */,
 				8FD141502E7E892900CCC911 /* Resources */,
+				8FD141BD2E7EEBE900CCC911 /* Swift Lint Run Script */,
 			);
 			buildRules = (
 			);
@@ -243,6 +244,30 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8FD141BD2E7EEBE900CCC911 /* Swift Lint Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/.swiftlint.yml",
+				"$(SRCROOT)/Scripts/swiftlint.sh",
+			);
+			name = "Swift Lint Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${SRCROOT}/Scripts/swiftlint.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8FD1414E2E7E892900CCC911 /* Sources */ = {

@@ -1,0 +1,23 @@
+# SwiftLint configuration for BudgetTracker
+# Limit linting to the app source to avoid sandbox denials when the build script
+# doesn't declare Tests folders as script input files.
+
+# Only lint the main app sources
+included:
+  - BudgetTracker
+
+# Explicitly exclude folders that shouldn't be linted (and may not be readable by sandbox)
+excluded:
+  - BudgetTrackerTests
+  - BudgetTrackerUITests
+  - .build
+  - Carthage
+  - Pods
+
+# Xcode-friendly output
+reporter: "xcode"
+
+# Customize rules as needed. Start minimal and expand later.
+# disabled_rules:
+#   - trailing_whitespace
+#   - line_length
